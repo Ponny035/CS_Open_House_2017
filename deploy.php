@@ -1,29 +1,6 @@
-<?php #!/usr/bin/env /usr/bin/php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-set_time_limit(0);
-
-try {
-
-  $payload = json_decode($_REQUEST['payload']);
-
-}
-catch(Exception $e) {
-
-	//log the error
-	file_put_contents('/srv/www/www.domain.com/logs/github.txt', $e . ' ' . $payload, FILE_APPEND);
-
-	  exit(0);
-}
-
-if ($payload->ref === 'refs/heads/master') {
-
-	$project_directory = '/srv/www/www.domain.com/public_html/';
-
-	$output = shell_exec("/srv/www/www.domain.com/public_html/git-puller.sh");
-
-	//log the request
-	file_put_contents('/srv/www/www.domain.com/logs/github.txt', $output, FILE_APPEND);
-
+<?php
+// Use in the "Post-Receive URLs" section of your GitHub repo.
+if ( $_POST['payload'] ) {
+  shell_exec( 'cd /srv/www/git-repo/ && git reset --hard HEAD && git pull' );
 }
 ?>
