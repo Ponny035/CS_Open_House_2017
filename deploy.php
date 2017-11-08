@@ -1,45 +1,29 @@
-<?php
-    /**
-     * GIT DEPLOYMENT SCRIPT
-     *
-     * Used for automatically deploying websites via GitHub
-     *
-     */
+<?php #!/usr/bin/env /usr/bin/php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+set_time_limit(0);
 
-    // array of commands
-    $commands = array(
-        'echo $PWD',
-        'whoami',
-        'git pull',
-        'git status',
-        'git submodule sync',
-        'git submodule update',
-        'git submodule status',
-    );
+try {
 
-    // exec commands
-    $output = '';
-    foreach($commands AS $command){
-        $tmp = shell_exec($command);
-        
-        $output .= "<span style=\"color: #6BE234;\">\$</span><span style=\"color: #729FCF;\">{$command}\n</span><br />";
-        $output .= htmlentities(trim($tmp)) . "\n<br /><br />";
-    }
+  $payload = json_decode($_REQUEST['payload']);
+
+}
+catch(Exception $e) {
+
+	//log the error
+	file_put_contents('/srv/www/www.domain.com/logs/github.txt', $e . ' ' . $payload, FILE_APPEND);
+
+	  exit(0);
+}
+
+if ($payload->ref === 'refs/heads/master') {
+
+	$project_directory = '/srv/www/www.domain.com/public_html/';
+
+	$output = shell_exec("/srv/www/www.domain.com/public_html/git-puller.sh");
+
+	//log the request
+	file_put_contents('/srv/www/www.domain.com/logs/github.txt', $output, FILE_APPEND);
+
+}
 ?>
-
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <title>GIT DEPLOYMENT SCRIPT</title>
-</head>
-<body style="background-color: #000000; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
-<div style="width:700px">
-    <div style="float:left;width:350px;">
-    <p style="color:white;">Git Deployment Script</p>
-    <?php echo $output; ?>
-    </div>
-</div>
-</body>
-</html>
-
