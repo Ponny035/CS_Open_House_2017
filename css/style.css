@@ -7,6 +7,23 @@ body {
   background-color: #336699; 
 }
 
+.featurette {
+  padding-top: 24px;
+}
+
+@media (max-width: 400px) {
+  .featurette-heading {
+    font-size: 20px;
+  }
+  .featurette {
+    padding-top: 16px;
+  }
+}
+
+.font-kanit {
+  font-family: 'Kanit', 'Helvetica Neue'
+}
+
 .btn.outline {
   font-family: 'Kanit'!important;
   font-weight: bold;
@@ -63,13 +80,19 @@ body {
   .dropdown-menu{
     background-color: rgba(46, 46, 46, 0.95) !important;
     /* opacity: 0.75; */
-    width: 100%;
+    width: 150%;
+    margin-left: -50%;
     font-size: auto;
   }
   .dropdown-menu li {
     padding-left: 24px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-right: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .dropdown-menu a {
+    font-size: 12px;
+    /* line-height: 0.25; */
   }
   .dropdown-menu li:hover{
     background-color: rgba(0, 0, 0, 1)
