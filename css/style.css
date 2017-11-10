@@ -25,9 +25,9 @@ body {
 }
 
 @media (max-width: 400px) {
-  .featurette-heading {
-    font-size: 20px;
-  }
+  /* .featurette-heading {
+    font-size: 28px;
+  } */
   .featurette {
     padding-top: 16px;
     padding-top: 8px;
