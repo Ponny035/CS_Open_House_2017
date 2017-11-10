@@ -1,0 +1,24 @@
+ The modern day manufacturing process in Thailand is often complex and
+poses many issues that business owners have to take into account.
+Important decisions need to be made about how to optimize production
+workflow to ensure minimal delays and guarantee that customers receive
+their orders on time. Human errors that occurs in manual labor,
+inaccurate data gathered from the manufacturing and the inability to
+track the production stock are some of the factors that cause losses
+for manufacturing industries. Hence, an Intelligent Manufacturing
+Execution System has been developed to plan production orders, track
+the events of production lines and record information that provides
+relevant statistics about a production facility. Scheduling algorithms
+that are built into the Intelligent Manufacturing Execution System
+provide support for serial, parallel and multi-component production
+types. These algorithms allows manufacturers to build and customize a
+production line according to the production method and the type of
+product being produced. Digital sensors that connects to the
+information system from around the factory tracks the number of parts
+being produced and is verified in the reports that the system
+generates. As a result of providing a high level of personalization
+that adheres a factory's needs, enhanced production output and reduced
+overall downtime can be achieved. Intelligent Manufacturing System
+technology grants an affordable solution to business owners and
+improves the manufacturing standards for Thailand as the country
+advances into the digital age of Industry 4.0.

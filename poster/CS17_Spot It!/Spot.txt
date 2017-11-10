@@ -1,0 +1,8 @@
+ Spot It! is a simple and fun match-making card game released in USA and
+Europe. This project develop the game into mobile web application
+platform to create a new experience for enjoying Spot It!.  The game
+support from 2 ?€“ 8 players and can be played within the range of local
+wireless network that was set up to host Spot It! The Application. To
+implement further knowledge from field of computer science into the
+project, the cluster web servers are implemented to host Spot It! The
+Application to ensure good playing experience throughout the game.

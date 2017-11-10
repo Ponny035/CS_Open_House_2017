@@ -1,0 +1,4 @@
+SoundsFitt is a progressive web application to help user to improve
+fitness by playing the music matched to your heart rate. The main
+purpose is also help to prevent the injure or pain from over exercising
+for those people who has the medical condition.
