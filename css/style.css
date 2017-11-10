@@ -106,6 +106,7 @@ h6 {
   text-transform: uppercase; }
 
 p {
+  text-indent: 40px;
   font-family: 'Kanit', sans-serif;
   /* font-size: 16px; */
   font-size: 18px;
