@@ -95,12 +95,17 @@ body {
   }
   .dropdown-menu{
     background-color: rgba(46, 46, 46, 0.95) !important;
-    /* opacity: 0.75; */
-    width: 175%;
-    margin-left: -75%;
-    margin-top: -2px;
     font-size: auto;
+    /* overflow-y: scroll; */
   }
+  @media (min-width: 768px) {
+    .dropdown-menu {
+      width: 175%;
+      margin-left: -75%;
+      margin-top: -2px;
+      font-size: auto;
+    }
+  }    
   .dropdown-menu li {
     padding-left: 24px;
     padding-right: 16px;
